@@ -59,14 +59,14 @@ And here. | Okay. | I think we get it.
 
 return (
   <div className='App'>
-  <div className='container-md' className={style.editor}>
+  <div className={style.editor}>
     <div className={style.topEditor}><FaFreeCodeCamp title='yeahhhhhh'/> Editor</div>
     <textarea value={text} className={style.bottomEditor} onChange={e => {setText(e.target.value)}}></textarea>
        </div>
 
-       <div className='d-flex flex-column container-lg bg-primary' className={style.previewer} >
-        <div className="row-md p-3 text-center " className={style.topPreviewer}><FaFreeCodeCamp title='yeahhhhhh' /> Previewer</div>
-        <ReactMarkdown children={text} remarkPlugins={[remarkGfm]} className="row-md bg-danger overflowy-scroll" className={style.bottomPreviewer}>
+       <div className={style.previewer} >
+        <div className={style.topPreviewer}><FaFreeCodeCamp title='yeahhhhhh' /> Previewer</div>
+        <ReactMarkdown children={text} remarkPlugins={[remarkGfm]} className={style.bottomPreviewer}>
             </ReactMarkdown>
         </div>
   </div>
